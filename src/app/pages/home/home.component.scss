@@ -1,0 +1,95 @@
+@import '../../../styles.scss';
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  .banner {
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    position: relative;
+
+    .titles {
+      height: 100%;
+      padding: 0px 50px;
+      position: absolute;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 70%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7), #000000);
+      background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7), #000000);
+      background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7), #000000);
+      background: -o-linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7), #000000);
+
+      h1 {
+        font-size: 25px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        color: #FFFFFF;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 400px;
+        font-weight: 400;
+        text-align: justify;
+        color: #c4c4c4;
+      }
+
+      .button-explore {
+        border-radius: 5px;
+        border-style: none;
+        padding: 6px 14px;
+        background-color: transparent;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 12px;
+        gap: 5px;
+
+        img {
+          height: 20px;
+          margin-top: 3px;
+        }
+      }
+
+      .play {
+        margin-top: 40px;
+        gap: 5px;
+
+        .button-play {
+          border-style: none;
+          padding-left: 4px;
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          background-color: transparent;
+          border: 1px solid #FFFFFF;
+          cursor: pointer;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .cards-trailers {
+    width: 100%;
+    gap: 25px;
+    position: absolute;
+    z-index: 4;
+    margin-top: -30px;
+
+  }
+}

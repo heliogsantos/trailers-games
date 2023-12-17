@@ -5,7 +5,35 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+$purple: #8234e9;
+$green: #29e0a9;
+$dark: #000000;
+
 html,
 body {
   height: 100%;
+  width: 100%;
+  background-color: $dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
