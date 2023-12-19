@@ -5,8 +5,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-$purple: #8234e9;
-$green: #29e0a9;
+$red: #c62828;
 $dark: #000000;
 
 html,
@@ -14,6 +13,22 @@ body {
   height: 100%;
   width: 100%;
   background-color: $dark;
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: $dark;
+  border-radius: 1px;
+  border: 1px solid $dark;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 h1,

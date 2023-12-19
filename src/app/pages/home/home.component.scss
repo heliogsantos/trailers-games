@@ -1,24 +1,85 @@
 @import '../../../styles.scss';
 
+.video {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
 .container {
   height: 100%;
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 900;
+
+  .sound {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 100;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .select-box {
+    position: relative;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 800;
+    border: 0.5px solid #FFFFFF;
+
+    img {
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+    }
+
+    select {
+      padding: 4px 30px 2px 30px;
+      background: transparent;
+      appearance: none;
+      line-height: normal;
+
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      outline: none;
+      border-style: none;
+      max-width: 30ch;
+      color: $red;
+
+      option {
+        max-width: 30ch;
+        padding: 0 10px;
+        outline: none;
+        color: $red;
+        background: $dark;
+        font-family: 'Bebas Neue', sans-serif;
+      }
+    }
+  }
+
 
   .banner {
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
     width: 100%;
-    height: 450px;
+    height: 100%;
     position: relative;
 
     .titles {
       height: 100%;
-      padding: 0px 50px;
+      padding: 0px 20px;
       position: absolute;
       display: flex;
       align-items: flex-start;
-      justify-content: center;
+      padding-top: 100px;
       flex-direction: column;
       left: 0;
       top: 0;
@@ -30,66 +91,55 @@
       background: -o-linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7), #000000);
 
       h1 {
-        font-size: 25px;
-        padding-bottom: 20px;
+        font-size: 30px;
+        padding-bottom: 10px;
         font-weight: 600;
         color: #FFFFFF;
+        font-family: 'Bebas Neue', sans-serif;
       }
 
       p {
         font-size: 15px;
-        line-height: 1.6;
+        line-height: 1.5;
         max-width: 400px;
-        font-weight: 400;
-        text-align: justify;
+        text-align: left;
+        text-wrap: balance;
         color: #c4c4c4;
-      }
-
-      .button-explore {
-        border-radius: 5px;
-        border-style: none;
-        padding: 6px 14px;
-        background-color: transparent;
-        cursor: pointer;
-        color: #FFFFFF;
-        font-size: 12px;
-        gap: 5px;
-
-        img {
-          height: 20px;
-          margin-top: 3px;
-        }
+        font-weight: 300;
       }
 
       .play {
         margin-top: 40px;
         gap: 5px;
-
-        .button-play {
-          border-style: none;
-          padding-left: 4px;
-          width: 60px;
-          height: 60px;
-          border-radius: 100%;
-          background-color: transparent;
-          border: 1px solid #FFFFFF;
-          cursor: pointer;
-
-          img {
-            width: 20px;
-            height: 20px;
-          }
-        }
+        position: relative;
+        z-index: 15;
       }
     }
   }
 
   .cards-trailers {
-    width: 100%;
-    gap: 25px;
+    width: 80%;
     position: absolute;
-    z-index: 4;
-    margin-top: -30px;
+    justify-content: flex-start;
+    bottom: 20px;
+    gap: 25px;
+    z-index: 10;
+    overflow-x: auto;
+    margin-left: 20px;
+  }
 
+  .cards-trailers::-webkit-scrollbar-thumb {
+    background-color: $red;
+    border-radius: 1px;
+  }
+
+  .cards-trailers::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  .cards-trailers::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.4);
   }
 }

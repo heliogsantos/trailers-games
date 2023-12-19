@@ -1,0 +1,50 @@
+@import '../../../styles.scss';
+
+.button-explore {
+  border-radius: 5px;
+  border-style: none;
+  padding: 6px 14px;
+  background-color: transparent;
+  cursor: pointer;
+  color: $red;
+  font-size: 16px;
+  gap: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+  transition: 0.3s linear;
+
+  img {
+    height: 30px;
+    width: 34px;
+  }
+
+  &:hover>img {
+    animation: identifier 0.3s linear;
+  }
+
+  &:hover {
+    color: $red;
+  }
+
+}
+
+@keyframes identifier {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 0.5px;
+  }
+
+  50% {
+    margin-left: 1px;
+  }
+
+  75% {
+    margin-left: 2px;
+  }
+
+  100% {
+    margin-left: 4px;
+  }
+}
