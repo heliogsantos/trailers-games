@@ -3,7 +3,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { CardTrailerComponent } from '../../components/card-trailer/card-trailer.component';
 import { RoundIconBorderComponent } from '../../components/round-icon-border/round-icon-border.component';
-import { ActionIconComponent } from '../../components/action-icon/action-icon.component';
 import { SoniaIaComponent } from '../../components/sonia-ia/sonia-ia.component';
 
 @Component({
@@ -12,7 +11,6 @@ import { SoniaIaComponent } from '../../components/sonia-ia/sonia-ia.component';
   imports: [
     CardTrailerComponent,
     RoundIconBorderComponent,
-    ActionIconComponent,
     CommonModule,
     SoniaIaComponent
   ],

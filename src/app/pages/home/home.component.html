@@ -3,42 +3,48 @@
   Seu navegador não suporta o elemento de vídeo.
 </video>
 
-
 <div class="container">
   <div class="sound">
     <app-round-icon-border (click)="toggleMute()" [icon]="iconSound" [alt]="'Icone para deixar o som mudo'" [width]="25"
       [height]="25"></app-round-icon-border>
   </div>
 
-  <div class="select-box center">
-    <select>
-      <option selected>Call of Duty: WWII</option>
+  <div class="select-box">
+    <select id="select">
+      <option>Call of Duty</option>
       <option value="1">God of war</option>
-      <option value="1">Value 2</option>
+      <option value="1">Tob Raider</option>
+      <option value="1">the last of us</option>
     </select>
     <img src="../../../assets/icons/arrow-down.png" alt="Selecione o jogo para ver os trailers">
   </div>
 
   <section class="banner">
     <article class="titles">
-      <h1>Call of Duty: WWII</h1>
-      <p>A série Call of Duty retorna às raízes com Call of Duty®: WWII, uma experiência espetacular que redefine
-        a Segunda...
-      </p>
-
-      <div class="play center">
-        <app-round-icon-border (click)="togglePlayback()" [icon]="playIcon" [alt]="'Icone para iniciar no trailer'"
-          [width]="40" [height]="40"></app-round-icon-border>
-        <app-action-icon></app-action-icon>
+      <div>
+        <h1>Call of Duty: WWII</h1>
+        <p>A série Call of Duty retorna às raízes com Call of Duty®: WWII, uma experiência espetacular que redefine
+          a Segunda...
+        </p>
+        <br>
+        <a class="button-explore">
+          Explorar Jogo
+        </a>
       </div>
-    </article>
-  </section>
 
-  <section class="cards-trailers center">
-    <app-card-trailer [image]="'../../../assets/call-of-duty-mw-2-card.jpg'"></app-card-trailer>
-    <app-card-trailer [image]="'../../../assets/call-of-duty-mw-card.jpg'"></app-card-trailer>
-    <app-card-trailer [image]="'../../../assets/call-of-duty-mw-3-card.jpg'"></app-card-trailer>
-    <app-card-trailer [image]="'../../../assets/call-of-duty-mw-3-card.jpg'"></app-card-trailer>
+      <div>
+        <div class="play center">
+          <app-round-icon-border (click)="togglePlayback()" [icon]="playIcon" [alt]="'Icone para iniciar no trailer'"
+            [width]="30" [height]="30"></app-round-icon-border>
+        </div>
+
+        <div class="play center">
+          <app-round-icon-border [border]="false" (click)="togglePlayback()" [icon]="'../../../assets/icons/full.png'"
+            [alt]="'Icone para iniciar no trailer'" [width]="40" [height]="40"></app-round-icon-border>
+        </div>
+      </div>
+
+    </article>
   </section>
 </div>
 <app-sonia-ia></app-sonia-ia>

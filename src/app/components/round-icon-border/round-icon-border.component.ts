@@ -13,4 +13,5 @@ export class RoundIconBorderComponent {
   @Input() height = 30;
   @Input() alt?: string;
   @Input() icon?: string;
+  @Input() border = true;
 }

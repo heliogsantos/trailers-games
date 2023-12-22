@@ -1,3 +1,19 @@
-<div class="container center">
-  <img src="../../../assets/icons/sonia.gif" alt="Pergunte a Sonia">
+<div class="wrapper">
+  <div class="sonia center">
+    <img src="../../../assets/icons/sonia.gif" alt="Pergunte a Sonia">
+  </div>
+
+  <div class="dialog" [ngClass]="{'animete': !dialog}">
+    <button class="close" (click)="closeDialog()">
+      <img src="../../../assets/icons/close.png" alt="Fechar Diálogo">
+    </button>
+    <p>
+      Olá! Eu sou a <span>Sonia</span>, sua assistente de jogos. Como posso ajudar hoje?
+    </p>
+
+    <br>
+    <p>Diga algo parecido com:</p>
+    <p><span>Sonia</span>, forneça informações sobre o jogo God of War e mostre o trailer.</p>
+
+  </div>
 </div>
