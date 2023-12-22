@@ -22,6 +22,7 @@ export class HomeComponent {
 
   readonly iconPlayer = '../../../assets/icons/play.png';
   readonly iconStop = '../../../assets/icons/stop.png';
+  fullVideo = false;
 
   playIcon = this.iconPlayer;
   iconSound = '../../../assets/icons/sound.png';
@@ -41,12 +42,20 @@ export class HomeComponent {
     }
   };
 
-  togglePlayback(): void {
+  togglePlayback() {
     if (this.videoPlayer) {
       const video: HTMLVideoElement = this.videoPlayer.nativeElement;
 
       this.playerVideo(video);
       this.toggleIcon(video.paused);
     }
+  }
+
+  fullvideo = () => {
+    this.fullVideo = true;
+  }
+
+  colseFullVideo = () => {
+    this.fullVideo = false;
   }
 }

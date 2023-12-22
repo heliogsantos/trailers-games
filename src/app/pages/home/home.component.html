@@ -1,7 +1,20 @@
-<video #videoPlayer class="video">
+<video #videoPlayer class="video" *ngIf="!fullVideo">
   <source src="../../../assets/videos/call-of-duty-wwII.mp4" type="video/mp4">
   Seu navegador não suporta o elemento de vídeo.
 </video>
+
+<div class="video-full" *ngIf="fullVideo">
+  <div class="close" (click)="colseFullVideo()">
+    <img src="../../../assets/icons/close.png" alt="Fechar vídeo">
+  </div>
+
+  <video style="width: 100%;height: 95%;" controls>
+
+    <source src="../../../assets/videos/call-of-duty-wwII.mp4" type="video/mp4">
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
+</div>
+
 
 <div class="container">
   <div class="sound">
@@ -35,11 +48,11 @@
       <div>
         <div class="play center">
           <app-round-icon-border (click)="togglePlayback()" [icon]="playIcon" [alt]="'Icone para iniciar no trailer'"
-            [width]="30" [height]="30"></app-round-icon-border>
+            [width]="50" [height]="50"></app-round-icon-border>
         </div>
 
-        <div class="play center">
-          <app-round-icon-border [border]="false" (click)="togglePlayback()" [icon]="'../../../assets/icons/full.png'"
+        <div class="play center" title="Assistir em tela cheia">
+          <app-round-icon-border [border]="false" (click)="fullvideo()" [icon]="'../../../assets/icons/full.png'"
             [alt]="'Icone para iniciar no trailer'" [width]="40" [height]="40"></app-round-icon-border>
         </div>
       </div>
